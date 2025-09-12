@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dgvAgenda = new System.Windows.Forms.DataGridView();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Apellido_Pat = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,7 +42,7 @@
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.limpiarTablaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.temporizador = new System.Windows.Forms.Timer();
+            this.temporizador = new System.Windows.Forms.Timer(this.components);
             this.sfdGuardar = new System.Windows.Forms.SaveFileDialog();
             this.opfAbrir = new System.Windows.Forms.OpenFileDialog();
             this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
@@ -69,6 +70,7 @@
             this.dgvAgenda.RowTemplate.Height = 28;
             this.dgvAgenda.Size = new System.Drawing.Size(1465, 567);
             this.dgvAgenda.TabIndex = 0;
+            this.dgvAgenda.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAgenda_CellContentClick);
             // 
             // Nombre
             // 
@@ -163,6 +165,7 @@
             // 
             // temporizador
             // 
+            this.temporizador.Enabled = true;
             this.temporizador.Interval = 500;
             this.temporizador.Tick += new System.EventHandler(this.temporizador_Tick);
             // 
@@ -200,6 +203,7 @@
             this.MainMenuStrip = this.menu;
             this.Name = "Agenda";
             this.Text = "Agenda";
+            this.Load += new System.EventHandler(this.Agenda_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAgenda)).EndInit();
             this.ssInfo.ResumeLayout(false);
             this.ssInfo.PerformLayout();

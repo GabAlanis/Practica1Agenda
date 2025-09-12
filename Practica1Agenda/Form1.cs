@@ -1,8 +1,17 @@
 ﻿using Newtonsoft.Json;
 using Practica1Agenda.Clases;
 using System;
-using System.IO;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Net.Http;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using Microsoft.Win32;
 
 namespace Practica1Agenda
 {
@@ -23,6 +32,22 @@ namespace Practica1Agenda
             {
                 MessageBox.Show("Error", "SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void limpiarTablaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult res = MessageBox.Show("¿Seguro de Generar un archivo nuevo?", "Sistema", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (res == DialogResult.OK)
+                dgvAgenda.Rows.Clear();
+
+            else
+                return;
+        }
+
+        private void salirToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+
         }
 
         private void guardar(BaseDatosJson lista)
@@ -73,22 +98,6 @@ namespace Practica1Agenda
 
         }
 
-        private void limpiarTablaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            DialogResult res = MessageBox.Show("¿Seguro de Generar un archivo nuevo?", "Sistema", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-            if (res == DialogResult.OK)
-                dgvAgenda.Rows.Clear();
-
-            else
-                return;
-        }
-
-        private void salirToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-            this.Close();
-
-        }
-
         private void temporizador_Tick(object sender, EventArgs e)
         {
             try
@@ -104,6 +113,16 @@ namespace Practica1Agenda
         }
 
         private void ssInfo_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void dgvAgenda_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void Agenda_Load(object sender, EventArgs e)
         {
 
         }
