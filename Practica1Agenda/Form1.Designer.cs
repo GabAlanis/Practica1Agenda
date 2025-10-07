@@ -67,54 +67,63 @@
             this.dgvAgenda.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvAgenda.Location = new System.Drawing.Point(0, 0);
             this.dgvAgenda.Name = "dgvAgenda";
+            this.dgvAgenda.RowHeadersWidth = 62;
             this.dgvAgenda.RowTemplate.Height = 28;
-            this.dgvAgenda.Size = new System.Drawing.Size(1465, 567);
+            this.dgvAgenda.Size = new System.Drawing.Size(1148, 453);
             this.dgvAgenda.TabIndex = 0;
             this.dgvAgenda.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAgenda_CellContentClick);
             // 
             // Nombre
             // 
             this.Nombre.HeaderText = "Nombre";
+            this.Nombre.MinimumWidth = 8;
             this.Nombre.Name = "Nombre";
             this.Nombre.Width = 150;
             // 
             // Apellido_Pat
             // 
             this.Apellido_Pat.HeaderText = "Apellido Paterno";
+            this.Apellido_Pat.MinimumWidth = 8;
             this.Apellido_Pat.Name = "Apellido_Pat";
             this.Apellido_Pat.Width = 150;
             // 
             // Apellido_Mat
             // 
             this.Apellido_Mat.HeaderText = "Apellido Materno";
+            this.Apellido_Mat.MinimumWidth = 8;
             this.Apellido_Mat.Name = "Apellido_Mat";
             this.Apellido_Mat.Width = 150;
             // 
             // Direccion
             // 
             this.Direccion.HeaderText = "Dirección";
+            this.Direccion.MinimumWidth = 8;
             this.Direccion.Name = "Direccion";
             this.Direccion.Width = 250;
             // 
             // Tel
             // 
             this.Tel.HeaderText = "Teléfono";
+            this.Tel.MinimumWidth = 8;
             this.Tel.Name = "Tel";
+            this.Tel.Width = 150;
             // 
             // Correo
             // 
             this.Correo.HeaderText = "Correo";
+            this.Correo.MinimumWidth = 8;
             this.Correo.Name = "Correo";
             this.Correo.Width = 200;
             // 
             // ssInfo
             // 
             this.ssInfo.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ssInfo.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.ssInfo.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.Etiqueta});
-            this.ssInfo.Location = new System.Drawing.Point(0, 545);
+            this.ssInfo.Location = new System.Drawing.Point(0, 431);
             this.ssInfo.Name = "ssInfo";
-            this.ssInfo.Size = new System.Drawing.Size(1465, 22);
+            this.ssInfo.Size = new System.Drawing.Size(1148, 22);
             this.ssInfo.TabIndex = 1;
             this.ssInfo.Text = "statusStrip1";
             this.ssInfo.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.ssInfo_ItemClicked);
@@ -125,17 +134,18 @@
             this.Etiqueta.ForeColor = System.Drawing.SystemColors.Desktop;
             this.Etiqueta.LinkColor = System.Drawing.Color.Black;
             this.Etiqueta.Name = "Etiqueta";
-            this.Etiqueta.Size = new System.Drawing.Size(0, 17);
+            this.Etiqueta.Size = new System.Drawing.Size(0, 15);
             // 
             // menu
             // 
             this.menu.Dock = System.Windows.Forms.DockStyle.None;
+            this.menu.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
+            this.menu.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.archivoToolStripMenuItem});
             this.menu.Location = new System.Drawing.Point(0, 0);
             this.menu.Name = "menu";
-            this.menu.Padding = new System.Windows.Forms.Padding(9, 3, 0, 3);
-            this.menu.Size = new System.Drawing.Size(1465, 25);
+            this.menu.Size = new System.Drawing.Size(1148, 35);
             this.menu.TabIndex = 1;
             this.menu.Text = "menuStrip1";
             this.menu.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menu_ItemClicked);
@@ -146,20 +156,20 @@
             this.limpiarTablaToolStripMenuItem,
             this.salirToolStripMenuItem});
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
-            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(60, 19);
+            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(88, 29);
             this.archivoToolStripMenuItem.Text = "Archivo";
             // 
             // limpiarTablaToolStripMenuItem
             // 
             this.limpiarTablaToolStripMenuItem.Name = "limpiarTablaToolStripMenuItem";
-            this.limpiarTablaToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.limpiarTablaToolStripMenuItem.Size = new System.Drawing.Size(217, 34);
             this.limpiarTablaToolStripMenuItem.Text = "Limpiar Tabla";
             this.limpiarTablaToolStripMenuItem.Click += new System.EventHandler(this.limpiarTablaToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(217, 34);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click_1);
             // 
@@ -182,13 +192,13 @@
             this.toolStripContainer1.ContentPanel.AutoScroll = true;
             this.toolStripContainer1.ContentPanel.Controls.Add(this.ssInfo);
             this.toolStripContainer1.ContentPanel.Controls.Add(this.dgvAgenda);
-            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(1465, 567);
+            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(1148, 453);
             this.toolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.toolStripContainer1.LeftToolStripPanelVisible = false;
             this.toolStripContainer1.Location = new System.Drawing.Point(0, 0);
             this.toolStripContainer1.Name = "toolStripContainer1";
             this.toolStripContainer1.RightToolStripPanelVisible = false;
-            this.toolStripContainer1.Size = new System.Drawing.Size(1465, 592);
+            this.toolStripContainer1.Size = new System.Drawing.Size(1148, 488);
             this.toolStripContainer1.TabIndex = 2;
             this.toolStripContainer1.Text = "toolStripContainer1";
             // 
@@ -198,7 +208,7 @@
             // 
             // Agenda
             // 
-            this.ClientSize = new System.Drawing.Size(1465, 592);
+            this.ClientSize = new System.Drawing.Size(1148, 488);
             this.Controls.Add(this.toolStripContainer1);
             this.MainMenuStrip = this.menu;
             this.Name = "Agenda";
